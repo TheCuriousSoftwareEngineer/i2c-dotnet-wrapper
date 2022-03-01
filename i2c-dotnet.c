@@ -9,6 +9,11 @@
 #include <errno.h>
 #include <string.h>
 
+int test_driver_loaded()
+{
+	return 1;
+}
+
 int reg_read_byte(int fd, uint8_t addr, uint8_t regaddr, uint8_t* content) 
 {
 	struct i2c_rdwr_ioctl_data iocall;    // structure pass to i2c driver
